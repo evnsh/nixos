@@ -23,7 +23,6 @@
     gnumake
     grim
     grimblast
-    hoppscotch
     imv
     jaq
     jq
