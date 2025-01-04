@@ -13,9 +13,9 @@
       local all       all     trust
     '';
     initialScript = pkgs.writeText "backend-initScript" ''
-      CREATE ROLE nixcloud WITH LOGIN PASSWORD 'nixcloud' CREATEDB;
-      CREATE DATABASE nixcloud;
-      GRANT ALL PRIVILEGES ON DATABASE nixcloud TO nixcloud;
+      CREATE ROLE evan WITH LOGIN PASSWORD 'evan' CREATEDB;
+      CREATE DATABASE evan;
+      GRANT ALL PRIVILEGES ON DATABASE evan TO evan;
     '';
   };
 }

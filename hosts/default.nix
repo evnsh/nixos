@@ -11,7 +11,6 @@
 
     # Core modules from external inputs
     nixosModules = [
-      inputs.disko.nixosModules.default
       inputs.home-manager.nixosModules.default
     ];
 
@@ -61,10 +60,10 @@
         } (args.specialArgs or {});
       };
   in {
-    # Lenovo Yoga Slim 7 Pro X (14IAH7)
+    # MacBook Pro M1 Pro (14-inch, 2021)
     yuki = mkNixosSystem {
       hostname = "yuki";
-      system = "x86_64-linux";
+      system = "aarch64-linux";
       modules = [nixosModules homeModules];
     };
 

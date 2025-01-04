@@ -4,6 +4,7 @@
       enable = true;
       wifi = {
         backend = "iwd";
+        settings.General.EnableNetworkConfiguration = true;
         powersave = true;
       };
     };

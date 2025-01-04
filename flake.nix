@@ -1,6 +1,6 @@
 {
-  # https://github.com/raexera/yuki
-  description = "Yuki: NixOS and Home Manager Flake";
+  # https://github.com/evnsh/nix
+  description = "NixOS and Home Manager Flake";
 
   outputs = inputs:
     inputs.flake-parts.lib.mkFlake {inherit inputs;} {
@@ -15,11 +15,6 @@
   inputs = {
     systems.url = "github:nix-systems/default-linux";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     flake-parts = {
       url = "github:hercules-ci/flake-parts";

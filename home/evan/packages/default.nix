@@ -1,0 +1,69 @@
+{
+  pkgs,
+  self,
+  ...
+}: {
+  imports = [
+    ./dev
+  ];
+
+  home.packages = with pkgs; [
+    self.packages.${pkgs.system}.lightctl
+    self.packages.${pkgs.system}.networkctl
+    self.packages.${pkgs.system}.volumectl
+
+    amberol
+    bc
+    beekeeper-studio
+    brave
+    celluloid
+    cloudflared
+    vesktop
+    gcc
+    gnumake
+    grim
+    grimblast
+    hoppscotch
+    imv
+    jaq
+    jq
+    just
+    killall
+    libnotify
+    loupe
+    nodejs
+    openssl
+    ouch
+    p7zip
+    pnpm
+    podman-compose
+    httpie
+    procs
+    psmisc
+    psutils
+    pwvucontrol
+    redis
+    ripgrep
+    rsync
+    scc
+    sd
+    slack
+    slurp
+    speedtest-go
+    swappy
+    trash-cli
+    tree
+    unrar
+    unzip
+    upscayl
+    watchexec
+    wget
+    wf-recorder
+    wl-clipboard
+    wrk
+    xh
+    yq
+    yt-dlp
+    zip
+  ];
+}

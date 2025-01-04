@@ -1,8 +1,8 @@
 {pkgs, ...}: {
   imports = [
-    ./disk-configuration.nix
     ./hardware-configuration.nix
     ./power-management.nix
+    ./asahi.nix
 
     ./programs/dconf.nix
     ./programs/gnupg.nix
@@ -34,30 +34,17 @@
   hardware = {
     graphics = {
       enable = true;
-      enable32Bit = true;
     };
-
-    nvidia = {
-      prime = {
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
-      };
-    };
-
-    nvidia-container-toolkit.enable = true;
   };
 
   services = {
-    btrfs.autoScrub.enable = true;
+    # btrfs.autoScrub.enable = true;
 
-    fwupd.enable = true;
+    # fwupd.enable = true;
 
-    hardware.bolt.enable = true;
+    # hardware.bolt.enable = true;
   };
 
-  # Intel Core i7-12700H (Alder Lake)
-  boot.kernelParams = ["i915.force_probe=46a6" "i915.enable_guc=3"];
-
-  # NVIDIA GeForce RTX 3050 Mobile (Ampere)
-  services.xserver.videoDrivers = ["nvidia"];
+  # Tell DE about the notch
+  boot.kernelParams = ["apple_dcp.show_notch=1"];
 }
