@@ -46,7 +46,6 @@
     rsync
     scc
     sd
-    slack
     slurp
     speedtest-go
     swappy
