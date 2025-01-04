@@ -23,8 +23,6 @@
     ../config/window-managers/hyprland
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
-
   hardware = {
     graphics = {
       enable = true;

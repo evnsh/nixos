@@ -1,6 +1,4 @@
 {config, ...}: {
-  environment.systemPackages = with config.boot.kernelPackages; [cpupower];
-
   powerManagement.powertop.enable = true;
 
   services = {
