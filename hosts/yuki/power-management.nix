@@ -4,8 +4,6 @@
   services = {
     acpid.enable = true;
 
-    thermald.enable = true;
-
     tlp = {
       enable = true;
       settings = {
