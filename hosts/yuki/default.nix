@@ -20,12 +20,6 @@
     ./virtualisation/podman.nix
 
     ../config/fonts
-    ../config/hardware/acpi_call
-    ../config/hardware/bluetooth
-    ../config/hardware/cpu/intel
-    ../config/hardware/gpu/intel
-    ../config/hardware/gpu/nvidia
-    ../config/hardware/ssd
     ../config/window-managers/hyprland
   ];
 
