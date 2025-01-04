@@ -199,6 +199,5 @@
     // terminal
     // theme
     // extension
-    // formatter
     // language;
 }
